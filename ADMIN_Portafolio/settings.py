@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-rr^*7qe958udv=km*=vt^_1pwxfsf1@xut24n%!s*g217sx2nm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['theyammatos.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -128,6 +128,9 @@ import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# Ruta absoluta donde Django recolectará todos los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
