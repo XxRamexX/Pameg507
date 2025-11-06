@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pamela Milagro</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -571,20 +571,32 @@ figure img {
     font-size: 16px;
     color: white;
     margin-top: 50px;
-}@media (max-width: 1285px){
+}/* Tablets y pantallas medianas */
+@media (max-width: 1285px){
     html{
         font-size: 55%;
     }
     .services-container{
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
-        margin: 0 5 rem;
+        margin: 0 5rem;
+    }
+    .home{
+        gap: 5rem;
+    }
+    .home-content h1{
+        font-size: 6rem;
+    }
+    figure img {
+        width: 500px;
+        height: 500px;
     }
 }
+
+/* Tablets pequeñas y pantallas medianas */
 @media(max-width: 991px){
     header{
         padding: 2rem 3%;
-    
     }
     section{
         padding: 10rem 3% 2rem;
@@ -592,12 +604,12 @@ figure img {
     .timeline-items::before{
         left: 7px;
     }
-    .timeline-items:nth-child(odd){
+    .timeline-item:nth-child(odd){
         padding-right: 0;
-        text-align: right;
+        text-align: left;
     }
-    .timeline-items:nth-child(odd),
-    .timeline-items:nth-child(even){
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
         padding-left: 37px;
     }
     .timeline-dot{
@@ -615,7 +627,13 @@ figure img {
     .footer{
         padding: 2rem 3%;
     }
+    figure img {
+        width: 400px;
+        height: 400px;
+    }
 }
+
+/* Móviles y pantallas pequeñas */
 @media(max-width: 885px){
     #menu-icon{
         display: block;
@@ -624,7 +642,7 @@ figure img {
         position: absolute;
         top: 100%;
         width: 100%;
-        height: 0;
+        height: auto;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
@@ -640,31 +658,75 @@ figure img {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        color: white
+        color: white;
+        text-align: center;
     }
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 5rem 2rem;
+        gap: 3rem;
+    }
+    .home-content{
+        text-align: center;
+        align-items: center;
     }
     .home-content h3{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
+        font-size: 5rem;
     }
     .home-content p{
         max-width: 100%;
-        margin: 0 auto;
+        margin: 2rem auto;
+        font-size: 1.8rem;
     }
-    .home-img img{
-        width: 56vw;
+    figure img {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
     }
     .services h2{
         margin-bottom: 3rem;
     }
     .services-container{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .service-box{
+        height: auto;
+        padding: 2rem;
+    }
+    .service-box .service-info{
+        padding: 2rem;
+    }
+    .heading{
+        font-size: 5rem;
+    }
+    .social-icons{
+        justify-content: center;
+    }
+}
+
+/* Móviles muy pequeños */
+@media(max-width: 480px){
+    html{
+        font-size: 50%;
+    }
+    .home-content h1{
+        font-size: 4rem;
+    }
+    figure img {
+        width: 250px;
+        height: 250px;
+    }
+    .testimonial-item{
+        padding: 20px 30px;
+    }
+    .social-icons a{
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
     }
 }
     </style>
